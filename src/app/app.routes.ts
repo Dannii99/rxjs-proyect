@@ -2,18 +2,18 @@ import { Routes } from '@angular/router';
 
 export const routes: Routes = [
     {
-        path: '',
+        path: 'rxjs',
         title: 'Rxjs',
-        loadChildren: () => import('./pages/rxjs/rxjs.component').then((m) => m.RxjsComponent)
+        loadComponent: () => import('./pages/rxjs/rxjs.component').then((m) => m.RxjsComponent)
     },
     {
         path: '',
-        redirectTo: '',
+        redirectTo: '/rxjs',
         pathMatch: 'full'
     },
     {
         path: '**',
-        redirectTo: '',
+        redirectTo: '/rxjs',
         pathMatch: 'full'
     }
 ];
