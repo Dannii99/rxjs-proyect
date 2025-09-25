@@ -1,0 +1,64 @@
+<main class="max-w-4xl mx-auto p-6">
+    <h1 class="text-4xl font-bold text-center text-indigo-600 mb-10">RXJS</h1>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+        <!-- Observable -->
+        <section class="bg-white rounded-2xl shadow-md p-6">
+            <h3 class="text-2xl font-semibold text-indigo-700 mb-2">Observable</h3>
+            <p class="text-sm text-gray-600 mb-4">
+                Una representación de cualquier conjunto de valores durante cualquier período de tiempo. Este es el
+                bloque de construcción más básico de RxJS.
+            </p>
+            @for (item of obs; track $index; let i = $index) {
+            <p class="text-gray-800">value({{i+1}}): <span class="font-medium">{{item}}</span></p>
+            }
+        </section>
+
+        <!-- Observer -->
+        <section class="bg-white rounded-2xl shadow-md p-6">
+            <h3 class="text-2xl font-semibold text-green-700 mb-2">Observer</h3>
+            <p class="text-sm text-gray-600 mb-4">
+                Una interfaz de objeto que define un conjunto de funciones de devolución de llamada que un usuario puede
+                usar para obtener notificado de cualquier conjunto de eventos de notificación observables.
+            </p>
+            @for (item of obsve; track $index; let i = $index) {
+            <p class="text-gray-800">value({{i+1}}): <span class="font-medium">{{item}}</span></p>
+            }
+        </section>
+
+        <!-- Subject -->
+        <section class="bg-white rounded-2xl shadow-md p-6">
+            <h3 class="text-2xl font-semibold text-pink-700 mb-2">Subject</h3>
+            <p class="text-sm text-gray-600 mb-4">
+                Un Subject es un tipo especial de Observable que permite que los valores sean multidifusión a muchos
+                observadores. Los Subjects son como EventEmitters.
+            </p>
+            @for (item of subjet; track $index; let i = $index) {
+            <p class="text-gray-800">value({{i+1}}): <span class="font-medium">{{item}}</span></p>
+            }
+        </section>
+
+        <!-- BehaviorSubject -->
+        <section class="bg-white rounded-2xl shadow-md p-6">
+            <h3 class="text-2xl font-semibold text-yellow-700 mb-2">BehaviorSubject</h3>
+            <p class="text-sm text-gray-600 mb-4">
+                Una variante de Subject que requiere un valor inicial y emite su valor cada vez que se suscribe.
+            </p>
+            @for (item of behaviorSubject; track $index; let i = $index) {
+            <p class="text-gray-800">value({{i+1}}): <span class="font-medium">{{item}}</span></p>
+            }
+        </section>
+
+        <!-- ReplaySubject -->
+        <section class="bg-white rounded-2xl shadow-md p-6">
+            <h3 class="text-2xl font-semibold text-red-400 mb-2">ReplaySubject</h3>
+            <p class="text-sm text-gray-600 mb-4">
+                Una variante de Subject que "reproduce" los valores antiguos a los nuevos suscriptores emitiéndolos cuando se suscriben por primera vez.
+            </p>
+            @for (item of replaySubject; track $index; let i = $index) {
+            <p class="text-gray-800">value({{i+1}}): <span class="font-medium">{{item}}</span></p>
+            }
+        </section>
+    </div>
+</main>
